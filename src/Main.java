@@ -1,9 +1,11 @@
 import view.Menu;
+import view.QualityView;
 import view.UserView;
 
 public class Main {
     public static void main(String[] args) {
         Menu.showHomePage();
+
 //
 //        System.out.println("㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡ ㋡");
 //        System.out.println("㋡                            ㋡");

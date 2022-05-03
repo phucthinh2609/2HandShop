@@ -23,7 +23,7 @@ public class OrderView {
         String address =input.nextLine();
 
         QualityView qualityView = new QualityView();
-        qualityView.showGoods();
+        qualityView.show();
 
         System.out.println("Nhập id sản phẩm: ");
         System.out.print(" ⭆ ");

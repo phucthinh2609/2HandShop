@@ -6,7 +6,10 @@ import java.util.Scanner;
 public class Menu {
 
     public static void showHomePage(){
-        System.out.println("\n>> WELCOME TO THE 2HAND SHOP'S MANAGEMENT SYSTEM <<");
+        System.out.println("+-----------------------------------+");
+        System.out.println("|        Welcome to Phuc's          |");
+        System.out.println("|         The 2Hand Shop            |");
+        System.out.println("+-----------------------------------+");
         Menu.selection();
     }
 
@@ -63,8 +66,8 @@ public class Menu {
         System.out.println("|        QUALITY MENU         |");
         System.out.println("===============================");
         System.out.println("|                             |");
-        System.out.println("|    1. Nhập hàng             |");
-        System.out.println("|    2. Xuất hàng             |");
+        System.out.println("|    1. Hàng nhập             |");
+        System.out.println("|    2. Hàng xuất             |");
         System.out.println("|    3. Danh sách kho hàng    |");
         System.out.println("|                             |");
         System.out.println("===============================");

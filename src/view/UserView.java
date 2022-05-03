@@ -8,6 +8,49 @@ import java.util.Scanner;
 public class UserView {
     Scanner input = new Scanner(System.in);
 
+    public void show(){
+        System.out.println("----------------------------------------- DANH SÁCH NGƯỜI DÙNG--------------------------------------- ");
+        System.out.printf("%-5s %-22s %-15s %-22s %-20s %-10s \n", "Id", "Tên", "Số điện thoại", "Email", "Địa chỉ", "Người dùng");
+//        List<User> users = userService.getUsers();
+        User[] users = new User[3];
+        users[0] = new User(111, "phucthinh123", "thinh123", "Phúc Thịnh", "07876262102", "phucthinh2609@gmail.com", "Huế", "Admin");
+        users[1] = new User(222, "thienan456", "an123", "Thiên Ân", "0983764221", "thienan2000@gmail.com", "Huế", "User");
+        users[2] = new User(333, "trucly245", "ly123", "Trúc Ly", "0283764834", "trucly.235@gmail.com", "Quảng Trị", "User");
+
+        for (User user : users) {
+            System.out.printf("%-5d %-22s %-15s %-22s %-20s %-10s\n", user.getId(), user.getName(), user.getPhone(), user.getEmail(), user.getAddress(), user.getRole());
+        }
+        System.out.println("-----------------------------------------------------------------------------------------------------  ");
+        System.out.println(" ");
+    }
+
+    public void showUsers(){
+        try {
+            show();
+            boolean is = true;
+            do {
+                System.out.println("<== 9: Quay lại        0: Thoát");
+                System.out.println("\nChọn chức năng ");
+                System.out.print(" ⭆ ");
+                int choice = input.nextInt();
+                switch (choice) {
+                    case 9:
+                        ManagerUserView.run();
+                        break;
+                    case 0:
+                        Menu.exit();
+                        System.exit(0);
+                        break;
+                    default:
+                        System.out.println("Nhấn không đúng! vui lòng chọn lại");
+                        is = false;
+                }
+            } while (!is);
+        } catch (Exception e) {
+            System.out.println("Nhập sai. vui lòng nhập lại!");;
+        }
+    }
+
     public void addUser(){
         try {
             System.out.println("Nhập id");
@@ -249,47 +292,4 @@ public class UserView {
         }
     }
 
-
-    public void show(){
-        System.out.println("----------------------------------------- DANH SÁCH NGƯỜI DÙNG--------------------------------------- ");
-        System.out.printf("%-5s %-22s %-15s %-22s %-20s %-10s \n", "Id", "Tên", "Số điện thoại", "Email", "Địa chỉ", "Người dùng");
-//        List<User> users = userService.getUsers();
-        User[] users = new User[3];
-        users[0] = new User(111, "phucthinh123", "thinh123", "Phúc Thịnh", "07876262102", "phucthinh2609@gmail.com", "Huế", "Admin");
-        users[1] = new User(222, "thienan456", "an123", "Thiên Ân", "0983764221", "thienan2000@gmail.com", "Huế", "User");
-        users[2] = new User(333, "trucly245", "ly123", "Trúc Ly", "0283764834", "trucly.235@gmail.com", "Quảng Trị", "User");
-
-        for (User user : users) {
-            System.out.printf("%-5d %-22s %-15s %-22s %-20s %-10s\n", user.getId(), user.getName(), user.getPhone(), user.getEmail(), user.getAddress(), user.getRole());
-        }
-        System.out.println("-----------------------------------------------------------------------------------------------------  ");
-        System.out.println(" ");
-    }
-
-    public void showUsers(){
-        try {
-            show();
-            boolean is = true;
-            do {
-                System.out.println("<== 9: Quay lại        0: Thoát");
-                System.out.println("\nChọn chức năng ");
-                System.out.print(" ⭆ ");
-                int choice = input.nextInt();
-                switch (choice) {
-                    case 9:
-                        ManagerUserView.run();
-                        break;
-                    case 0:
-                        Menu.exit();
-                        System.exit(0);
-                        break;
-                    default:
-                        System.out.println("Nhấn không đúng! vui lòng chọn lại");
-                        is = false;
-                }
-            } while (!is);
-        } catch (Exception e) {
-            e.getStackTrace();
-        }
-    }
 }
