@@ -52,7 +52,7 @@ public class Menu {
         System.out.println("=================================================");
         System.out.println("|                                               |");
         System.out.println("|        1. Quản lý kho                         |");
-        System.out.println("|        2. Quản lý thông tin khách hàng        |");
+        System.out.println("|        2. Quản lý người dùng                  |");
         System.out.println("|        3. Quản lý đơn hàng                    |");
         System.out.println("|                                               |");
         System.out.println("=================================================");
