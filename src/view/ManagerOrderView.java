@@ -1,5 +1,8 @@
 package view;
 
+import model.Order;
+import model.OrderItem;
+
 import java.util.Scanner;
 
 public class ManagerOrderView {
@@ -7,6 +10,8 @@ public class ManagerOrderView {
     public static  void run() {
         Scanner scanner = new Scanner(System.in);
         OrderView orderView = new OrderView();
+        Order order = new Order();
+        OrderItem orderItem = new OrderItem();
         Menu.orderMenu();
         try {
             System.out.println("\nChọn chức năng ");
@@ -17,7 +22,7 @@ public class ManagerOrderView {
                     orderView.addOrder();
                     break;
                 case 2:
-                    orderView.showOrder();
+                    orderView.showOrderList(orderItem, order);
                     break;
                 case 0:
                     Menu.exit();

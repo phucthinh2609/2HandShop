@@ -4,17 +4,6 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Menu {
-    public static void mainMenu(){
-        System.out.println("\n=================================================");
-        System.out.println("|                  MAIN MENU                    |");
-        System.out.println("=================================================");
-        System.out.println("|                                               |");
-        System.out.println("|        1. Quản lý kho                         |");
-        System.out.println("|        2. Quản lý thông tin khách hàng        |");
-        System.out.println("|        3. Quản lý đơn hàng                    |");
-        System.out.println("|                                               |");
-        System.out.println("=================================================");
-    }
 
     public static void showHomePage(){
         System.out.println("\n>> WELCOME TO THE 2HAND SHOP'S MANAGEMENT SYSTEM <<");
@@ -55,6 +44,18 @@ public class Menu {
     public static void exit() {
         System.out.println("\tTạm biệt. Hẹn gặp lại!");
         System.exit(5);
+    }
+
+    public static void mainMenu(){
+        System.out.println("\n=================================================");
+        System.out.println("|                  MAIN MENU                    |");
+        System.out.println("=================================================");
+        System.out.println("|                                               |");
+        System.out.println("|        1. Quản lý kho                         |");
+        System.out.println("|        2. Quản lý thông tin khách hàng        |");
+        System.out.println("|        3. Quản lý đơn hàng                    |");
+        System.out.println("|                                               |");
+        System.out.println("=================================================");
     }
 
     public static void qualityMenu(){
